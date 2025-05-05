@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import './MovieItem.css';
 
 function MovieItem({ movie, onMovieClick }) {
-  const formattedRating = useMemo(() => {
+  const voteAverage = useMemo(() => {
     return movie.vote_average.toFixed(1);
   }, [movie.vote_average]);
 
@@ -15,8 +15,8 @@ function MovieItem({ movie, onMovieClick }) {
         <div className='movie-stats'>
           <div className='movie-rating'>
             <span>Rating:</span>
-            <span className='movie-rating-value'>{formattedRating}</span>
-            {/* <span className="movie-rating-value">{movie.vote_average}</span> */}
+            <span className='movie-rating-value'>{voteAverage}</span>
+            <span className="movie-rating-value">{movie.vote_average}</span>
           </div>
           <div className='movie-popularity'>
             <span>Votes:</span>
