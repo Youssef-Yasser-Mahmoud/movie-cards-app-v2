@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import MovieItem from './MovieItem';
 import './MoviesList.css';
 import useFetch from '../utils/useFetch';
@@ -11,6 +12,10 @@ const apiUrl = url + path + apiKey;
 function MoviesList() {
   const [moviesList, isLoading] = useFetch(apiUrl);
 
+  const handleMovieClick = useCallback((movieId) => {
+    console.log(`Movie clicked: ${movieId}`);
+  }, []);
+
   if (isLoading) {
     return <Spinner />;
   }
@@ -18,7 +23,7 @@ function MoviesList() {
   return (
     <div className='movies-container'>
       {moviesList.map((movie) => (
-        <MovieItem key={movie.id} movie={movie} />
+        <MovieItem key={movie.id} movie={movie} onMovieClick={handleMovieClick} />
       ))}
     </div>
   );
