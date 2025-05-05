@@ -2,6 +2,10 @@
 
 A responsive React application that displays popular movies from The Movie Database (TMDB) API.
 
+## 📸 Preview
+
+![screenshot](public/Movie%20Explorer.png)  
+
 ## Features
 
 ### 🎬 Movie Listings
