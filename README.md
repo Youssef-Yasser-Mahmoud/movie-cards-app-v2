@@ -1,12 +1,86 @@
-# React + Vite
+# Movie Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application that displays popular movies from The Movie Database (TMDB) API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🎬 Movie Listings
+- Fetches popular movies from TMDB API
+- Displays movies in a responsive grid layout
+- Shows movie posters, titles, overviews, ratings, and vote counts
 
-## Expanding the ESLint configuration
+### 🎨 Responsive Design
+- Responsive grid layout adapts to different screen sizes
+- Optimized for desktop, tablet, and mobile devices
+- Media queries ensure proper display on all devices
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 💅 Stylish UI Components
+- Dark theme with elegant card design
+- Hover effects with smooth animations
+- Cursor pointer on movie cards for better UX
+- Consistent color scheme throughout the application
+
+### ⚡ Performance Optimizations
+- Custom `useFetch` hook for data fetching
+- `useCallback` for memoizing event handlers
+- `useMemo` for optimizing calculations (formatted ratings)
+- Prevents unnecessary re-renders
+
+### 🔄 Loading State
+- Animated spinner during data loading
+- Smooth transition between loading and content states
+- Visual feedback for users during API requests
+
+## Technical Implementation
+
+### Component Structure
+- **App**: Main application component
+- **MoviesList**: Manages the movie grid and data fetching
+- **MovieItem**: Individual movie card component
+- **Spinner**: Loading indicator component
+
+### Custom Hooks
+- **useFetch**: Custom hook for API data fetching with loading state management
+
+### Styling
+- CSS modules for component-specific styling
+- Responsive design with media queries
+- Animation effects for enhanced user experience
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm 
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/Youssef-Yasser-Mahmoud/movie-cards-app-v2.git
+```
+2. Navigate to the project directory
+```bash
+cd movie-explorer
+```
+3. Install dependencies
+```bash
+npm install
+```
+4. Start the development server
+```bash
+npm run dev
+```
+## Technologies Used
+- React : UI library
+- Vite : Build tool and development server
+- CSS : Styling
+- TMDB API : Movie data source
+- ESLint : Code linting
+
+## API Reference
+This project uses The Movie Database (TMDB) API to fetch movie data.
+
+- Base URL: https://api.themoviedb.org/3
+- Endpoint: /discover/movie?sort_by=popularity.desc
+- Image Base URL: https://image.tmdb.org/t/p/w500/
