@@ -1,9 +1,11 @@
+import MoviesList from './components/MoviesList';
+
 function App() {
   return (
     <div>
-      APP
+      <MoviesList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
