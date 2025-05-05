@@ -3,3 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #121212; /* Dark background for the entire website */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
